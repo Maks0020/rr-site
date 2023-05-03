@@ -1473,5 +1473,9 @@ footer{
       footer > img {
             width: 100px;            
       }
+      
+      .txt-share{
+            width: 190px;
+      }
 
 }
