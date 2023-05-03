@@ -1,0 +1,1477 @@
+html{
+      background-color: black;
+      cursor: url("images/cursor/cursor.png") 16 16, auto;
+      
+}
+
+/* ::-webkit-scrollbar{
+      width: 0px;
+} */
+::-webkit-scrollbar{
+      width: 0px;
+      height: 0px;
+}
+body{
+      margin: 0px;
+}
+
+
+
+
+
+
+
+.header{
+      background-image: url(images/headr-bg.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+}
+
+.container-header{
+      margin: 0px 10%;
+}
+
+.header-line{
+      position: relative;
+      height: 8vh;
+      top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
+}
+.header-line::after{
+      position: absolute;
+      content: " ";
+      bottom: -10px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+}
+
+.burger-menu > button {
+      padding: 0px;
+      background: none;
+      border: none;
+      display: flex;
+}
+.burger-menu > button :hover {
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+}
+.burger-menu:hover {
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+}
+
+.logo-rr{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -ms-user-select: none; 
+      -moz-user-select: none;
+      user-select: none;
+}
+.logo-rr > a,
+.logo-rr > a > img :hover{
+      display: flex;
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+}
+
+.search{
+      position: relative;
+      width: 145px;
+}
+.search > input {
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 23px;
+      width: -webkit-fill-available;
+      text-align: center;
+      outline:none;
+      color: #ffffff;
+}
+.search > input:focus {
+      border: none;
+}
+.search::before{
+      position: absolute;
+      content: url(images/elements/search.png);
+      left: -23px;
+      top: 55%;
+      transform: translateY(-50%);
+
+}
+.search > input:hover {
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+}
+.search > button{
+      display: none;
+}
+
+
+
+.menu{
+      display: none;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 700px;
+      height: -webkit-fill-available;
+      background-color: #CACACA;
+      z-index: 1000000;
+      flex-direction: column;
+
+      background: rgba(14, 14, 14, 0.6);
+      border: 1px solid rgba(35, 35, 35, 0.7);
+      backdrop-filter: blur(10.5px);
+}
+
+.burger-menu-close{
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      display: flex;
+      justify-content: center;
+}
+
+.language{
+      display: flex;
+      justify-content: center;
+      margin-top: 110px;
+}
+
+.menu-links{
+      display: flex;
+      flex-direction: column;
+       align-items: flex-end;
+      justify-content: center;
+      margin-top: 200px;
+}
+
+.language > button{
+      font-family: 'Roboto', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 35px;
+      margin: 0px 30px;
+      text-decoration: unset;
+      color: white;
+      border: none;
+      background: none;
+      padding: 0px;
+      transition: 0.15s;
+      
+}
+
+.language > button:hover{
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+      color: rgb(210, 210, 210);
+}
+
+.menu-links > a{
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 37px;
+      text-decoration: none;
+      text-decoration: unset;
+      color: white;
+      margin: 25px 40px 25px 0px;
+      transition: 0.15s;
+} 
+.menu-links > a:hover{
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+      color: rgb(210, 210, 210);
+} 
+
+
+
+
+
+
+
+.search-window{
+      display: flex;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 87%;
+      height: 100px;
+      background: #161616;
+      justify-content: space-around;
+      border-radius: 10px;
+      z-index: 10000;
+      flex-direction: column;
+      align-items: center;
+}
+
+.search-window > img{
+      width: 40px;
+      opacity: 0.7;
+}
+
+
+#inpSearch{
+      width: 70%;
+      height: 30px;
+      margin: 15px 0px 0px;
+      background: #2e2e2e;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      text-align: center;
+      outline: none;
+      color: #ffffff;
+}
+#modalContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 999;
+    }
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+@media screen and (max-width: 1024px) {
+      .header {
+            background-size: 155%;
+      }
+
+      .container-header {
+            margin: 0px 7%;
+      }
+
+
+      .menu {
+            width: 100%;
+            align-items: center;
+      }
+
+      .menu-links {
+            margin-top: 180px;
+            align-items: center;
+      }
+      .menu-links > a {
+            margin: 20px 0px 20px 0px;
+      }
+
+      
+}
+
+@media screen and (max-width: 654px) {
+      .header-line {
+            height: 6vh;
+      }
+
+      .logo-rr > a > img{
+            width: 54px;
+      }
+
+      .search {
+            width: 130px;
+      }
+      .search > input {
+            font-size: 17px;
+      }
+
+
+}
+
+@media screen and (max-width: 500px) {
+      .search {
+            width: 50px;
+      }
+      .search > input {
+            display: none;
+      }
+      .search > input:focus {
+            display: none;
+      }
+      .search::before{
+            display: none;
+      
+      }
+      .search > button{
+            display: flex;
+            width: 100%;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 50px;
+            justify-content: center;
+            align-items: center;
+      }
+
+      .logo-rr > a > img {
+            width: 48px;
+      }
+
+      
+      .menu-links {
+            margin-top: 80px;
+      }
+
+      .menu-links > a {
+            font-size: 28px;
+      }
+
+      .language > a {
+            font-size: 28px;
+      }
+}
+
+
+
+
+
+
+
+/* О компании | About company */
+.full-vh{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+}
+
+
+
+.video-block{
+      position: relative;
+      overflow: hidden;
+      display: block;
+      height: 620px;
+      padding-top: 40px; 
+
+}
+.video-block > video{
+
+      width: 100%;
+      object-fit: cover;
+}
+
+.txt-more{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      top: 85%;
+      right: 5%;
+
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration: none;
+      color: #000000;
+
+      width: 225px;
+      height: 46px;
+
+      background: linear-gradient(95.16deg, #AEAEAE 4.7%, #FFFFFF 100.67%);
+      border-radius: 54px;
+}
+.txt-more:hover{
+      cursor: url("images/cursor/cursor-hover-black.png") 16 16, auto;
+
+}
+.txt-more:hover::after{
+      content: url("images/cursor/arrow-more.png");
+      height: 19px;
+      margin-left: 5px;
+
+      
+}
+.text-about-company-block{
+      display: flex;
+      justify-content: center;
+}
+
+
+.text-about-company{
+font-family: 'Montserrat', 'Calibri';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+text-align: justify;
+
+color: #FFFFFF;
+margin: 0px;
+width: 90%;
+}
+/* О компании | About company */
+
+
+
+
+
+
+/* История компании | history of the company */
+
+.company-history {
+      margin-top: 225px;
+  }
+
+.image-block{
+      position: relative;
+      display: flex;
+      justify-content: center;
+}
+
+
+
+
+.text-company-history{
+font-family: 'Montserrat', 'Calibri';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+text-align: justify;
+
+color: #FFFFFF;
+margin: 0px;
+width: 90%;      
+}
+/* История компании | history of the company */
+
+
+@media screen and (max-width: 1370px){
+      .text-about-company {
+            font-size: 24px;
+            line-height: 28px;
+            width: 95%;
+      }
+
+      .video-block {
+            height: 548px;
+            padding-top: 30px;
+      }
+
+      .video-block > video {
+            height: 548px;
+      }
+
+      .txt-more {
+      top: 85%;
+      right: 5%;
+      font-size: 18px;
+      line-height: 24px;
+      width: 219px;
+      height: 44px;
+      }
+
+
+
+      .full-vh {
+            justify-content: space-evenly;
+      }
+
+      .old-car{
+            width: 675px;
+      }
+
+      .text-company-history {
+            font-size: 24px;
+            line-height: 28px;
+            width: 95%;
+      }
+} 
+
+@media screen and (max-width: 1030px){
+      .video-block {
+            height: 450px;
+            padding-top: 20px;
+      }
+
+      .video-block > video {
+            height: 450px;
+      }
+
+      .txt-more {
+            top: 85%;
+            right: 5%;
+            font-size: 17px;
+            line-height: 24px;
+            width: 200px;
+            height: 42px;
+      }
+
+      .text-about-company {
+            font-size: 20px;
+            line-height: 23px;
+      }
+
+
+
+}
+
+@media screen and (max-width: 770px){
+
+      .video-block{
+            display: flex;
+            height: unset;
+            padding: 0px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+      }
+
+      .video-block > video {
+            width: 140%;
+            height: 68%;  
+      }
+
+      .txt-more{
+            position: unset;
+            width: 60%;
+            background: none;
+            color: white;
+            border: 2px solid white;
+      }
+
+      .text-about-company{
+            font-size: 17px;
+            line-height: 23px;
+      }
+
+      .txt-more:hover::after{
+            content: url("images/cursor/arrow-more.png");
+            height: 19px;
+            margin-left: 5px;
+            filter: invert(1);
+      }
+
+
+      .image-block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .old-car {
+            width: 100%;
+            margin-bottom: 20px;
+      }
+
+      .text-company-history {
+            font-size: 17px;
+            line-height: 23px;
+            width: 95%;
+      }
+      
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* Фотографии | images */
+
+.images-block {
+      position: relative;
+      margin-top: 200px;
+}
+
+.video-stars_bg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      
+}
+
+
+
+.photo-a, .photo-b, .photo-c {
+      position: absolute;
+
+}
+.images-block > img:not(.photo-a):not(.photo-b):not(.photo-c) {
+      display: none;
+} 
+    
+.photo-a {
+      width: 16%;
+      top: 5%;
+      left: -8%;
+}
+
+    
+.photo-b {
+      width: 65%;
+      top: 50%;
+      left: 46%;
+      transform: translate(-50%, -50%);
+}
+    
+.photo-c {
+      bottom: 5%;
+      right: 0px;
+      object-fit: cover;
+      width: 264px;
+      height: 233px;
+}
+.photo-c:hover {
+      cursor: url("images/cursor/corsor-next.png") 16 16, auto;
+}      
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+      .photo-c {
+            width: 235px;
+            height: 208px;
+      }
+  
+}
+
+@media screen and (max-width: 1030px) {
+      .photo-b {
+            width: 70%;
+      }
+      
+      .photo-c {
+            width: 178px;
+            height: 142px;
+      }
+  
+}
+
+@media screen and (max-width: 800px) {
+      .photo-a {
+            display: none;
+      }
+
+      .photo-b {
+            top: 35%;
+      }
+
+      .photo-c {
+            bottom: 10%;
+            width: 239px;
+            height: 203px;
+      }
+
+  
+}
+
+@media screen and (max-width: 780px) {
+      .photo-b {
+            width: 95%;
+            left: 50%;
+      }
+
+      .photo-c {
+            width: 278px;
+            height: 217px;
+      }
+
+}
+
+@media screen and (max-width: 500px) {
+      .full-vh {
+            height: 75vh;
+      }
+
+      .photo-a {
+            display: none;
+      }
+
+      .photo-b {
+            top: 35%;
+            left: 50%;
+      }
+
+      .photo-c {
+            width: 178px;
+            height: 151px;
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Фотографии | images */
+
+
+
+.auto-cards{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      height: 100%;
+      margin-top: 150px;
+}
+
+.auto-cards-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      height: max-content;
+}
+
+.card-container{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 38px;
+      width: 100%;
+      justify-content: space-between
+}
+.card-container > a {
+      position: unset;
+      /* width: 60%;
+      background: none;
+      color: white;
+      border: 2px solid white; */
+}
+.card-container > a ::after{
+      filter: invert();
+}
+
+
+.card-container > img {
+      width: 100%;
+      margin: 35px 0px 25px;
+}
+
+.name-car{
+      font-family: 'Montserrat', 'Calibri';
+      font-style: italic;
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 98px;
+      color: #FFFFFF;
+      margin: 0px;
+}
+
+.characteristics{
+      margin: 0px 0px 30px;
+      padding: 0px;
+}
+.characteristics > li {
+      position: relative;
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: #CACACA;
+      list-style-type: none;
+      margin: 0px 0px 30px 0px;
+      padding-left: 40px;
+}
+.characteristics > li::before{
+      position: absolute;
+      content: ' ';
+      width: 25px;
+      height: 1px;
+      background-color: #FFFFFF;
+      left: 20px;
+      top: 50%;
+      transform: translateX(-50%);
+
+}
+
+
+
+.txt-card{
+      font-family: 'Montserrat', 'Calibri';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #CACACA;
+    margin: 0px 0px 60px;
+}
+
+
+.center-card::after{
+      content: " ";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(55, 55, 55, 0) 0%, #373737 50%, rgba(55, 55, 55, 0) 100%);
+      right: -38px;
+}
+
+.center-card::before{
+      content: " ";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(55, 55, 55, 0) 0%, #373737 50%, rgba(55, 55, 55, 0) 100%);
+      left: -38px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+      .name-car {
+            font-size: 70px;
+      }
+
+      .card-container > img {
+            width: 95%;
+            margin: 30px 0px 20px;
+      }
+
+      .characteristics {
+            margin: 0px 0px 25px;
+      }
+
+      .characteristics > li {
+            font-size: 20px;
+      }
+
+      .txt-card {
+            font-size: 18px;
+            margin: 0px 0px 50px;
+      }
+
+
+      
+}
+
+@media screen and (max-width: 1366px) {
+      .name-car {
+            font-size: 60px;
+      }
+
+      .characteristics > li {
+            font-size: 19px;
+            line-height: 20px;
+      }
+
+      .txt-card {
+            font-size: 17px;
+      }
+
+
+      
+}
+
+@media screen and (max-width: 1024px) {
+      .name-car {
+            font-size: 46px;
+      }
+
+      .card-container > img {
+            width: 90%;
+            margin: 10px 0px 15px;
+      }
+
+      .characteristics {
+            margin: 0px 0px 10px;
+      }
+      .characteristics > li {
+            font-size: 14px;
+            line-height: 15px;
+            margin: 0px 0px 20px 0px;
+      }
+      .characteristics > li::before {
+            width: 18px;
+      }
+
+      .card-container {
+            margin: 0px 20px;
+      }
+
+      .center-card::before {
+            left: -20px;
+      }
+      .center-card::after {
+            right: -20px;
+      }
+
+      .txt-card {
+            font-size: 13px;
+      }
+
+      .card-container > img {
+            width: 90%;
+            margin: 5px 0px 10px;
+      } 
+}
+
+@media screen and (max-width: 1024px) {
+      .card-container {
+            margin: 0px 5px;
+      }
+      .center-card::before {
+            left: -7px;
+      }
+      .center-card::after {
+            right: -3px;
+      }
+
+      .name-car {
+            font-size: 40px;
+      }
+
+      .characteristics > li {
+            font-size: 13px;
+            margin: 0px 0px 15px 0px;
+            padding-left: 30px;
+      }
+
+      .txt-card {
+            font-size: 14px;
+      }
+
+      .characteristics > li {
+            padding-left: 37px;
+      }
+
+      .characteristics > li::before {
+            width: 15px;
+      }
+}
+
+
+@media screen and (max-width: 800px) {
+      .auto-cards-container {
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .card-container {
+            width: 80%;
+            margin: 40px 0px;
+      }
+
+      .name-car {
+            font-size: 70px;
+      }
+
+      .characteristics > li {
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0px 0px 30px 0px;
+            padding-left: 40px;
+      }
+      .characteristics > li::before {
+            width: 25px;
+      }
+
+      .txt-card {
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0px 0px 60px;
+      }
+
+      .center-card::before {
+            width: 100%;
+            height: 1px;
+            /* background: linear-gradient(90deg, rgba(55, 55, 55, 0) 0%, #373737 47.4%, rgba(55, 55, 55, 0) 100%); */
+            left: -50%;
+            transform: translateX(50%);
+            top: -40px;
+      }
+      .center-card::after {
+            width: 100%;
+            height: 1px;
+            /* background: linear-gradient(90deg, rgba(55, 55, 55, 0) 0%, #373737 47.4%, rgba(55, 55, 55, 0) 100%); */
+            left: -50%;
+            transform: translateX(50%);
+            bottom: -40px;
+      }
+}
+
+@media screen and (max-width: 580px) {
+      .characteristics > li {
+            font-size: 22px;
+            line-height: 22px;
+      }
+
+      .txt-card {
+            font-size: 21px;
+            line-height: 29px;
+      }
+
+}
+
+@media screen and (max-width: 450px) {
+      .name-car {
+            font-size: 60px;
+            line-height: 80px;
+      }
+
+      .center-card::before {
+            top: -30px;
+      }
+
+      .center-card::after {
+            bottom: -30px;
+      }
+}
+
+
+
+
+/* дух экстаза | spirit of ecstasy */
+
+.spirit-of-ecstasy{
+      margin-top: 150px;
+}
+
+.spirit-of-ecstasy-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 250px;
+}
+
+.image-soe{
+      display: flex;
+      justify-content: center;    
+}
+
+.image-soe > img {
+      margin-bottom: 80px;
+}
+
+.text-soe{
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 41px;
+      text-align: center;
+      color: #FFFFFF;
+      margin: 0px;
+}
+
+
+@media screen and (max-width: 1440px) {
+      .spirit-of-ecstasy-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 7%;
+      }
+
+      .image-soe > img {
+            width: 95%;
+            margin-bottom: 50px;
+      }
+}
+
+@media screen and (max-width: 1366px) {
+      .image-soe > img {
+            width: 95%;
+            margin-bottom: 30px;
+      }
+
+      .text-soe {
+            font-size: 27px;
+            line-height: 38px;
+      }
+}
+
+@media screen and (max-width: 1024px) {
+      .text-soe {
+            font-size: 22px;
+            line-height: 34px;
+      }
+
+}
+
+@media screen and (max-width: 800px) {
+      .spirit-of-ecstasy {
+            margin-top: 30px;
+      }
+
+      .spirit-of-ecstasy-container {
+            margin: 0px 5%;
+      }
+
+      .image-soe > img {
+            width: 100%;
+            margin-bottom: 30px;
+      }
+
+      .text-soe {
+            font-size: 19px;
+            line-height: 29px;
+      }
+
+}
+
+@media screen and (max-width: 500px) {
+      .spirit-of-ecstasy {
+            margin-top: 30px;
+      }
+
+      .spirit-of-ecstasy-container {
+            margin: 0px 2%;
+      }
+
+      .text-soe {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+}
+
+@media screen and (max-width: 430px) {
+      .text-soe {
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+}
+
+@media screen and (max-width: 430px) {
+      .text-soe {
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+}
+
+@media screen and (max-width: 430px) {
+      .text-soe {
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+}
+
+
+/* дух экстаза | spirit of ecstasy */
+
+.video-create-car {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      width: -webkit-fill-available;
+}
+
+.vcc-container{
+      display: flex;
+      justify-content: center;
+      width: -webkit-fill-available;
+}
+
+.vcc-container > video {
+      object-fit: cover;
+      width: 100%;
+}
+
+.txt-more-create-car {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 200px;
+      border: 2px solid black;
+      background: none;
+      color: black;
+      filter: invert(1);
+}
+
+.txt-create-car{
+      position: absolute;
+      /* left: 50%;
+      transform: translateX(-50%); */
+      font-family: 'Roboto', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.75);
+      filter: blur(0.5px);
+      top: 120px;
+      margin: 0px;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+      .txt-create-car {
+            top: 160px;
+      }
+
+      .txt-more-create-car {
+            top: 240px;
+      }
+
+}
+
+@media screen and (max-width: 635px) {
+      .txt-create-car {
+            font-size: 32px;
+            letter-spacing: 0.15em;
+      }
+
+      .txt-more-create-car {
+            top: 230px;
+      }
+}
+
+@media screen and (max-width: 545px) {
+      .txt-create-car {
+            font-size: 32px;
+            letter-spacing: 0.1em;
+            top: 140px;
+      }
+
+      .txt-more-create-car {
+            top: 210px;
+      }
+
+      .vcc-container > video {
+            height: 700px;
+      }
+}
+
+@media screen and (max-width: 495px) {
+      .txt-create-car {
+            font-size: 28px;
+      }
+
+      .vcc-container > video {
+            height: 660px;
+      }
+}
+
+@media screen and (max-width: 445px) {
+      .txt-create-car {
+            font-size: 26px;
+      }
+
+      .vcc-container > video {
+            height: 630px;
+      }
+}
+
+@media screen and (max-width: 400px) {
+      .txt-create-car {
+            font-size: 20px;
+      }
+}
+
+
+
+
+
+
+
+footer{
+      background: linear-gradient(96.07deg, rgba(26, 26, 26, 0.67) -10.28%,
+      rgba(37, 37, 37, 0.67) 35.85%, 
+      rgba(49, 49, 49, 0.5896) 75.26%, 
+      rgba(26, 26, 26, 0.67) 104.99%);
+
+      height: 580px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+.share-block{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 20px 0px;
+}
+
+
+.txt-share{
+      display: flex;
+      border: 3px solid black;
+      border-radius: 200px;
+      width: 260px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+
+      animation: shadow  3s ease-in-out infinite;
+      transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.txt-share > p{
+
+      font-family: 'Montserrat', 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration: none;
+      color: #575757;
+      margin: 0px;
+
+      transition: 0.7s linear;
+      
+}
+
+
+.txt-share:hover{
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;
+}
+.txt-share::after{
+      content: url(images/share/right-arrow-tg.png);
+      height: 22px;
+      display: none;
+      margin-left: 8px;
+}
+.txt-share::before{
+      content: url(images/share/left-arrow-vk.png);
+      height: 22px;
+      display: none;
+      margin-right: 8px;
+}
+
+
+.arrow{
+      display: none;
+}
+
+.vk-icon, .tg-icon{
+
+      opacity: 0;
+      margin: 0px 0px;
+      transition: 0.8s linear;
+}
+
+
+
+
+.share-block:hover > .txt-share > p{
+      font-size: 0px;
+}
+.share-block:hover > .txt-share{
+      width: 80px;
+      animation: none;
+}
+
+.share-block:hover > .txt-share::after{
+      display: unset;
+}
+.share-block:hover > .txt-share::before{
+      display: unset;
+}
+
+.share-block:hover > .vk-icon{
+      opacity: 1;
+      margin-right: 25px;
+}
+.share-block:hover > .tg-icon{
+      /* display: unset; */
+      margin-left: 25px;
+      opacity: 1;
+}
+
+.vk-icon{
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto;   
+}
+
+.tg-icon{
+      cursor: url("images/cursor/cursor-hover.png") 16 16, auto; 
+}
+
+@keyframes shadow{
+
+      0%{
+            box-shadow: 0px 0px 9px 1px rgba(109, 109, 109, 0);
+      }
+
+      50%{
+            box-shadow: 0px 0px 10px 2px rgba(109, 109, 109, 0.25);
+               
+      }   
+
+      100%{
+            box-shadow: 0px 0px 9px 1px rgba(109, 109, 109, 0);
+      }
+}
+
+@media screen and (max-width: 600px) {
+      footer > img {
+            width: 100px;            
+      }
+
+}
